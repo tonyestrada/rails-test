@@ -1,0 +1,9 @@
+<h1>Here are the users:</h1>
+
+<div>The total number of users are: <%= @user_count %></div>
+<ul>
+  <% @users.each do |user| %>
+    <li><%= user.first_name %> <%= user.last_name %></li>
+  <% end %>
+
+</ul>
