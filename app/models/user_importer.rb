@@ -1,0 +1,2 @@
+class UserImporter
+end
