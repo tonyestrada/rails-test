@@ -6,15 +6,21 @@ RSpec.describe UserImporter do
       expect(User.count).to eq(0)
     end
 
-    describe 'When we import a csv file' do
+    context 'When we import a csv file' do
       before do
         described_class.import!(csv_path)
       end
 
       let(:csv_path) { Rails.root.join('spec', 'fixtures', 'users.csv') }
+      let(:first_user) { User.first }
 
       it "creates three users" do
         expect(User.count).to eq(3)
+      end
+
+      it "Imports Freddy Mercurie" do
+        expect(first_user.first_name).to eq("Freddy")
+        expect(first_user.last_name).to eq("Mercurie")
       end
 
     end
