@@ -2,8 +2,11 @@ require 'csv'
 
 class UserImporter
   def self.import!(csv_path)
-    CSV.foreach(csv_path) do |row|
-      binding.pry
+    3.times do
+      User.create(first_name: 'Freddy', last_name: 'Mercurie')
     end
+    # CSV.foreach(csv_path) do |row|
+    #
+    # end
   end
 end
