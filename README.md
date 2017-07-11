@@ -1,24 +1,15 @@
-# README
+# rails-test
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Description  
 
-Things you may want to cover:
+Rails app to display users imported from a .csv file  
 
-* Ruby version
+## Run the app  
 
-* System dependencies
+`$ rails server`
 
-* Configuration
+## Import  
 
-* Database creation
+`$ rake import:users FILE_NAME=<path_to_filename>`
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+EG: `rake import:users FILE_NAME=spec/fixtures/users.csv`
